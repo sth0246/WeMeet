@@ -111,7 +111,9 @@ service层的目的就是将这些散着的CURD再次抽象。我们将user常�
 文件5是UserService的实现类，我们在这里实现文件6中的方法。实例化时我们使用的是实现类。
 
 ### controller层（基础JavaWeb中的servlet）
-## Spring中的Servlet与普通的Servlet不同
+
+
+#### Spring中的Servlet与普通的Servlet不同
 Spring对Servlet做出的优化是：
 原先的JavaWeb我们每写一个servlet都需要创建一个继承了HttpServlet的类
 并且需要在web.xml中声名。Spring使用了一个叫ServletDispatcher的东西。
@@ -141,7 +143,7 @@ Spring对Servlet做出的优化是：
 我们只在web.xml中配置了一个servlet便可完成所有servlet。原因是，配置的这一个servlet是一个连接池。
 我们所有的请求都会先接入到这个servlet中然后再由他dispatch给真正的servlet。
 
-## 如何编写真正的servlet？
+#### 如何编写真正的servlet？
 我们只需在controller文件下创建类即可
 再将类名上注解
 
@@ -232,7 +234,7 @@ public class UserTestController {
 该包为测试文件包，我们可以用Spring提供的测试工具单元测试某个模块，
 留下的默认文件中我使用了UserTestServiceImpl测试了User用户的查询所有用户功能。
 
-#### 至此对目录及其作用的简要讲解完毕。
+## 至此对目录及其作用的简要讲解完毕。
 
 
 
