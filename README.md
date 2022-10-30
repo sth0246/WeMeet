@@ -10,6 +10,22 @@
 images 为README.md文档的图片
 ![img.png](images/img3.png)
 
+#### jdbc配置
+在这里
+![img.png](images/img_10.png)
+
+
+![img_1.png](images/img_13.png)
+修改成自己的端口号（大家默认的都是3306）数据库名称
+账号和密码
+![img_2.png](images/img_12.png)
+
+这是一份测试用的sql文件。大家先在自己的SQL里跑一下就行
+
+![img_3.png](images/img_11.png)
+
+内容很简单 主要是为了测试
+
 
 #### 默认文件作用（如果学的不好可以按照该顺序和说明无脑开发）
 ![img_1.png](images/img_1.png)
