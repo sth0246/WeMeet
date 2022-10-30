@@ -1,5 +1,0 @@
-service\impl\UserServiceTestImpl.class
-dao\UserTestDao.class
-controller\UserTestController.class
-service\UserServiceTest.class
-entity\UserTest.class
