@@ -1,5 +1,6 @@
 package controller;
 
+import entity.User;
 import entity.UserTest;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -20,7 +21,7 @@ import java.util.List;
  */
 @Controller //标记为MVC的控制器类，方便DispatcherServlet进行扫描定位
 @RequestMapping("/test")
-@Api(tags = "AuthorBindPlatform",description = "作者绑定平台")
+@Api(tags = "UserTestAPI",description = "UserTestAPI测试")
 public class UserTestController {
     @Resource
     private UserServiceTest userServiceTest;
@@ -36,7 +37,7 @@ public class UserTestController {
 //多个servlet
     @PostMapping("/findAll1")
     @ResponseBody
-    @ApiOperation(value = "测试value2")
+    @ApiOperation(value = "测试value22222")
     public List<UserTest> findAll1(){
         return userServiceTest.findAllUser();
     }

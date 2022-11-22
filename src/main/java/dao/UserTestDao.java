@@ -1,6 +1,7 @@
 package dao;
 
 import entity.UserTest;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -11,6 +12,10 @@ import java.util.List;
  * @Date: 2022/10/29
  * @Time: 13:07
  */
+@Mapper
 public interface UserTestDao {
     List<UserTest> findAllUser();
+
+
+
 }
