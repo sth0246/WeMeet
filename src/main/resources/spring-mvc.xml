@@ -12,12 +12,19 @@
         https://www.springframework.org/schema/mvc/spring-mvc.xsd
 ">
 
+<!--    <bean class="config.MySwagger"/>-->
+<!--    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>-->
+<!--    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>-->
 
-    <!--开启controller扫描-->
-    <context:component-scan base-package="controller"/>
-    <mvc:annotation-driven/>
-    <!-- 2.静态资源默认servlet配置-->
-    <mvc:default-servlet-handler/>
+
+    <!--    <bean class="springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration" id="swagger2Config"/>-->
+<!--    -->
+    <mvc:default-servlet-handler></mvc:default-servlet-handler>
+    <bean id="swaggerconfig" class="config.SwaggerConfig"/>
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+    <!--自动扫描，使springMVC认为包下用了@controller注解的类是控制器-->
+
 
 
 <!--    &lt;!&ndash;配置springmvc的视图解析器&ndash;&gt;-->
@@ -31,6 +38,9 @@
         自动注册最合适的处理器映射器，处理器适配器(调用handler方法)
     -->
     <mvc:annotation-driven/>
+
+
+
 
 
 

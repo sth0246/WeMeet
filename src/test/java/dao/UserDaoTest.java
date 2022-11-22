@@ -1,3 +1,5 @@
+package dao;
+
 import dao.UserTestDao;
 import entity.UserTest;
 import org.junit.Test;

@@ -1,7 +1,10 @@
 package controller;
 
 import entity.UserTest;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import service.UserServiceTest;
@@ -17,26 +20,29 @@ import java.util.List;
  */
 @Controller //标记为MVC的控制器类，方便DispatcherServlet进行扫描定位
 @RequestMapping("/test")
+@Api(tags = "AuthorBindPlatform",description = "作者绑定平台")
 public class UserTestController {
     @Resource
     private UserServiceTest userServiceTest;
 
-    @RequestMapping("/findAll")
+    @PostMapping("/findAll")
     @ResponseBody
+    @ApiOperation(value = "测试value",notes = "测试notes")
     public List<UserTest> findAll(){
         return userServiceTest.findAllUser();
     }
 
 
 //多个servlet
-    @RequestMapping("/findAll1")
+    @PostMapping("/findAll1")
     @ResponseBody
+    @ApiOperation(value = "测试value2")
     public List<UserTest> findAll1(){
         return userServiceTest.findAllUser();
     }
 
 
-    @RequestMapping("/findAll2")
+    @PostMapping("/findAll2")
     @ResponseBody
     public List<UserTest> findAll2(){
         return userServiceTest.findAllUser();
