@@ -35,7 +35,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 
         ApiInfo apiInfo = new ApiInfoBuilder()
 
-                .title("[主站项目接口文档]")
+                .title("[WeMeet接口文档]")
 
                 .description("测试环境接口测试")
 

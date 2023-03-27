@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>WeMeet</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -147,6 +147,7 @@
 
 <!--        lombok便于编写entity-->
 <!--        -->
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -189,7 +190,12 @@
 
 
     </dependencies>
+
+    <name>WeMeet</name>
+    <!-- 打包war包 -->
+    <packaging>war</packaging>
     <build>
+        <finalName>${artifactId}</finalName>
         <resources>
             <resource>
                 <directory>src/main/java</directory>
@@ -208,5 +214,7 @@
         </resources>
 
     </build>
+
+
 
 </project>

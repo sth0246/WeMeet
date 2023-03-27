@@ -1,5 +1,6 @@
 package service;
 
+import entity.User;
 import entity.UserTest;
 
 import java.util.List;

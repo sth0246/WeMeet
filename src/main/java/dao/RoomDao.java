@@ -20,7 +20,7 @@ public interface RoomDao {
     int insertRoomInit(Room room);
     @Select("select * from rooms where roomId=#{roomId} and status=#{status}")
     List<Room> checkIdStatus(Room room);
-    @Select("select * from rooms where status=#{status}")
+    @Select("select * from rooms where status=#{status} limit 100")
     List<Room> selectStatus(Room room);
     @Update("update rooms set userP1=#{userP1},socketIdP1=#{socketIdP1},status=1 where roomId=#{roomId}")
     int updateP1(Room room);

@@ -40,6 +40,7 @@ https://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <bean id="swaggerconfig" class="config.SwaggerConfig"/>
     <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+<!--    <mvc:resources mapping="assets/*" location="/dist/assets/" />-->
 <!--    <bean class="config.MySwagger"/>-->
 <!--    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>-->
 <!--    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>-->

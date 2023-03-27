@@ -84,7 +84,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring-mybatis.xml")
-public class dao.UserDaoTest {
+public class UserDaoTest {
     @Autowired
     private UserTestDao userTestDao;
 
@@ -233,6 +233,9 @@ public class UserTestController {
 ### test
 该包为测试文件包，我们可以用Spring提供的测试工具单元测试某个模块，
 留下的默认文件中我使用了UserTestServiceImpl测试了User用户的查询所有用户功能。
+
+### linux部署coturn
+turnserver -v -r xxx.xxx.xxx.xxx(公网ip):3478 -a -o -c turnserver.conf
 
 ## 至此对目录及其作用的简要讲解完毕。
 

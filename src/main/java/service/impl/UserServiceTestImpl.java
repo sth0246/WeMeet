@@ -1,6 +1,7 @@
 package service.impl;
 
 import dao.UserTestDao;
+import entity.User;
 import entity.UserTest;
 import org.springframework.stereotype.Service;
 import service.UserServiceTest;
@@ -22,4 +23,5 @@ public class UserServiceTestImpl implements UserServiceTest {
     public List<UserTest> findAllUser() {
         return userTestDao.findAllUser();
     }
+
 }

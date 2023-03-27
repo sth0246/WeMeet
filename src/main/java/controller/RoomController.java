@@ -49,7 +49,11 @@ public class RoomController {
     @ResponseBody
     @ApiOperation(value = "用于通过状态查找房间号",notes = "参数为status状态信息")
     public List<Room> selectByStatus(int status){
+        if (status==0){
+            return roomServiceImpl.selectStatus(status).subList(0,3);
+        }
         return roomServiceImpl.selectStatus(status);
+
     }
 
 

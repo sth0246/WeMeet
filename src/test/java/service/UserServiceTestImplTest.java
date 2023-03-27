@@ -29,23 +29,6 @@ public class UserServiceTestImplTest {
         }
     }
 
-    @Autowired
-    private service.impl.RoomServiceImpl roomServiceImpl;
-    @Test
-    public void roomInit(){
-        Room room = new Room();
-        for (int i = 1000; i <= 9999 ; i++) {
-            room.setRoomId(i);
-            room.setStatus(0);
-            roomServiceImpl.insertRoomInit(room);
-        }
-    }
-    @Test
-    public void check(){
-
-        boolean b = roomServiceImpl.updateP1(1000, "!23", "!23");
-        System.out.println(b);
-    }
 
 
 }
